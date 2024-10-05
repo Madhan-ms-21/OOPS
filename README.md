@@ -20,23 +20,43 @@ Object/Entity is an Instance of class. It Occupies memory.
 
 There are 3 Pillars and 1 Principle of OOPS
 
-### Principles
+### Principle
 - Abstraction
-  - Abstraction tells us to envision complex system in terms of 
-  Ideas/Entities
-  - Ex: When Designing an Ecommerce Application, Simplify the 
-  complexity by envisoning the complex system into entities
-  like users , Products, Orders , Payments , Carts , Ratings etc.
-  - We dont want to Know the inner details of each entity 
-    We hide the complexity behind each Entity , Rather we simply 
-  the system in terms of Entities
-  - As a Summary Abstraction tells us to Envision the system 
+  - 
+    - Abstraction tells us to envision complex system in terms of 
+        Ideas/Entities.
+    - Ex: When Designing an Ecommerce Application, Simplify the 
+          complexity by envisoning the complex system into entities
+          like users , Products, Orders , Payments , Carts , Ratings etc.
+    - We dont want to Know the inner details of each entity 
+          We hide the complexity behind each Entity , Rather we simply 
+        the system in terms of Entities
+    - As a Summary Abstraction tells us to Envision the system 
   in terms of entities/ Ideas hiding the complex details.
 
 
 ### Pillar
 - Encapsulation
-- Inheritance 
+  - 
+  - Holding Attributes and Methods of an Entity together (via Class)
+  - Protects Attributes and Behaviours from Outside (access Modifiers)
+  - ### Access Modifiers
+    - [Private]() : The member is only
+      accessible within the class No other
+      code outside the class can access.
+      that member
+    - [Default]() : Any class within package can access
+      this member . To use this access Modifier don't write anything
+      before the member declaration
+    - [Protected]() : Protected members can be accessed by any class within the same package.
+      also  Protected members can also be accessed by subclasses, even if they are
+     in different packages. But Not Accessible from Unrelated Classes Protected
+     members cannot be accessed directly from classes that are not in the same package and do not 
+      inherit from the class with the protected members.
+    - [Public]() : Most lenient access modifier , A public member can be accessed
+      from anywhere
+- Inheritance
+  - 
 - Polymorphism
 
 For further reference, please consider the following sections:
