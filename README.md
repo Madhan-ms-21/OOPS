@@ -72,8 +72,26 @@ There are 3 Pillars and 1 Principle of OOPS
       compile time polymorphism
   - Run Time Polymorphism
     - Acheived by Method Overriding
-  
 
+
+
+### Thread.start()
+- Purpose: The start() method is used to begin the execution of a new thread.
+- Behavior: When you call start(), a new thread is created, and the run() method is invoked in that new thread. This means that the start() method does not block the current thread; both the current thread and the new thread will execute concurrently.
+- Thread State: When start() is called, the thread transitions from the NEW state to the RUNNABLE state, which allows the thread scheduler to manage it.
+
+
+### Thread.run()
+  - Purpose: The run() method contains the code that defines the thread's task.
+  - Behavior: When you call run() directly, it does not create a new thread. Instead, it executes the code within the run() method in the context of the current thread. This means that the current thread will block until the run() method completes.
+  - Thread State: When run() is called, the thread does not change its state; it remains in the state of the calling thread.
+
+
+In the below Example you can see when thread.run() is called it 
+runs in the current thread rather creating a new thread that is shown 
+there by priniting the thread name.
+![img_1.png](img_1.png)
+![img.png](img.png)
 For further reference, please consider the following sections:
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)

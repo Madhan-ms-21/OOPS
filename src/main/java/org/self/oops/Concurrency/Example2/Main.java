@@ -7,8 +7,7 @@ public class Main {
         OddPrinter oddPrinter = new OddPrinter(20);
         Thread evenThread = new Thread(evenPrinter);
         Thread oddThread = new Thread(oddPrinter);
-        evenThread.start();
-//        evenPrinter.start();
+        evenThread.run();
         oddThread.start();
     }
 }
