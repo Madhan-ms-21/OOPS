@@ -35,7 +35,7 @@ There are 3 Pillars and 1 Principle of OOPS
   in terms of entities/ Ideas hiding the complex details.
 
 
-### Pillar
+### Pillars
 - Encapsulation
   - 
   - Holding Attributes and Methods of an Entity together (via Class)
@@ -57,7 +57,22 @@ There are 3 Pillars and 1 Principle of OOPS
       from anywhere
 - Inheritance
   - 
-- Polymorphism
+- ## Polymorphism
+  - Compile Time Polymorphism
+    - It is Achieived By Method Overloading
+    - Method overloading allows us to
+      create multiple methods with
+      same name different method
+      signature in a class
+    - Examples of Different Signatures : 
+      - Print() Print(int t) Print(string s) Print(string s , String t)
+    - Because compiler can detect the
+      different parameters and tell which
+      method to be called . so this is
+      compile time polymorphism
+  - Run Time Polymorphism
+    - Acheived by Method Overriding
+  
 
 For further reference, please consider the following sections:
 
@@ -66,4 +81,8 @@ For further reference, please consider the following sections:
 * [Create an OCI image](https://docs.spring.io/spring-boot/3.3.4/maven-plugin/build-image.html)
 
 ### Maven Parent overrides
+
+### Link
+
+[LLD](https://github.com/ashishps1/awesome-low-level-design)
 
