@@ -74,6 +74,77 @@ There are 3 Pillars and 1 Principle of OOPS
     - Acheived by Method Overriding
 
 
+## Constructors
+
+A class has multiple attributes which needs to be initialized when an
+object is created.
+
+A constructor is a special method used to initialize attributes of a class
+When a object is created using new keyword a constructor is called.
+Types:
+- Default
+  - This constructor is given by java when we have not defined our constructor.
+  - In a default constructor all the attributes of a class are set to
+    their default value as per their data types
+  - int - 0 , float/double - 0.0 , bool - false , char - '' , string - null , custom object - null
+- No Args
+  - This is a custom constructor that is
+    added by the developer. 
+  - As per the name this constructor doesn't
+    takes any arguments It is mostly
+    used to initialize an object with
+    custom default values
+  - **_Note :_** Whenever you create a custom
+    constructor java compiler won't give you
+    a default constructor.
+- Paramterized
+  - These Constructors can take multiple
+    parameters
+- Copy constructor
+  - A copy constructor is a special constructor in a class that initializes a new object as a copy of an existing object. It creates a new instance of a 
+  class by copying the values of the attributes from another instance of the same class. This is particularly
+  useful in situations where you want to create a new object with the same state as 
+  an existing object without affecting the original.
+   
+  - Types of Copy
+    - Deep copy
+      - A deep copy creates a new object and recursively copies all objects found in the original object. This means that the copied object and the original object 
+      do not share any references to the same sub-objects.
+     
+      Example : 
+    
+      - Classes ![img_7.png](img_7.png) ![img_8.png](img_8.png)
+      
+      - Main Method ![img_9.png](img_9.png)
+      - Output ![img_6.png](img_6.png)
+      - In the above output we can see difference in objects of Course for 
+        both student Objects.
+    - Shallow Copy
+      - Shallow copy means all the non primitive inside your student
+        class are same as Original class
+      - Classes ![img_4.png](img_4.png) ![img_5.png](img_5.png)
+      - Main Method ![img_3.png](img_3.png)
+      - Output ![img_2.png](img_2.png)
+      - When we create an object using copy constructor we have only primitives 
+      are created , but objects are copied.
+      - As we can see we have course object at reference @773 and 
+      object of student class  S1 at reference @776 with course object as above one
+      So when we want to create a new object S2 of student class
+      which is copy of S1 the object got created at reference @778 but 
+      course object is still pointing to course object reference of S1.
+      - This is the Scenario of Shallow copy.
+### Memory management:
+  - Memory Management in Java is a critical aspect of the Java programming language and its runtime environment.
+  - It involves the allocation, usage, and deallocation of memory during the lifecycle of Java applications.
+  - Stack : Each thread in a process is stored in stack space
+    - Primitives are stored directly in stack
+    - Objects are stored in heap and their address is stored in stack.
+  - Heap Memory:
+    - This is where objects and their associated instance variables are stored. 
+    - The heap is created when the JVM starts and can grow or shrink dynamically.
+  - ## **Note :**  Java is Pass By Value
+
+
 # Process
   - code : Set of Instructions
   - Program : Compiled Code
@@ -132,6 +203,18 @@ Process Identification:
 - Process Scheduling: The information in the PCB allows the scheduler to make decisions about which process to run next based on priority, state, and other factors.
 
 - Process Termination: Upon termination, the PCB holds the exit status of the process and is used for cleanup activities, such as deallocating resources.
+
+### Concurrency
+Concurrency refers to the ability of a system to manage multiple tasks at the same time. 
+It doesn't necessarily mean that the tasks are being executed 
+simultaneously; rather, they can make progress independently and
+may be interleaved.
+
+### Parallelism
+Parallelism, refers to the actual simultaneous execution of multiple tasks. 
+This is typically achieved on multi-core processors, 
+where different cores can execute different threads or processes at the same time.
+
 
 
 ## Thread
