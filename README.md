@@ -55,8 +55,21 @@ There are 3 Pillars and 1 Principle of OOPS
       inherit from the class with the protected members.
     - [Public]() : Most lenient access modifier , A public member can be accessed
       from anywhere
-- Inheritance
-  - 
+- ## Inheritance
+  - Inheritance in OOP programming allows
+    us to inherit methods attributes
+    of parents depending upon access
+    modifiers
+  - whenever in real life you find
+  2 entities having IS A relationship then you can represent them in OOP way using Inheritance
+  - In Java inheritance is done using
+    the extends keyword
+  - Parent class is nothing but a
+    generalisation every child is more
+    specific
+  - When you want to call a specific
+    constructor of your parent use      **_**super**_** keyword
+
 - ## Polymorphism
   - Compile Time Polymorphism
     - It is Achieived By Method Overloading
@@ -113,10 +126,14 @@ Types:
      
       Example : 
     
-      - Classes ![img_7.png](img_7.png) ![img_8.png](img_8.png)
+      - Classes 
+      - ![img_7.png](img_7.png) ![img_8.png](img_8.png)
       
-      - Main Method ![img_9.png](img_9.png)
-      - Output ![img_6.png](img_6.png)
+      - Main Method 
+      - ![img_9.png](img_9.png)
+
+      - Output 
+      - ![img_6.png](img_6.png)
       - In the above output we can see difference in objects of Course for 
         both student Objects.
     - Shallow Copy
