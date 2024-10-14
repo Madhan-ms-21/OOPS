@@ -74,7 +74,71 @@ There are 3 Pillars and 1 Principle of OOPS
     - Acheived by Method Overriding
 
 
+# Process
+  - code : Set of Instructions
+  - Program : Compiled Code
+### Process : A process is a fundamental concept in operating systems, representing a program in execution
+When we start running a program
+process is created for it. Process is an instance
+of a program
 
+
+How does Os manages Multiple Process?
+
+If an OS has multiple processes to
+run then os will schedule processes
+to run as per CPU scheduling algorithm
+
+1. FCFS(First come First Serve)
+2. Round Robin etc.
+
+Process control block
+A Process Control Block (PCB) is a data structure used by the operating system
+to store all the information about a specific process. 
+It serves as a repository for the process's state and 
+control information, enabling the OS to manage processes effectively. 
+Each process has its own PCB, which is created when the process is initialized and deleted when the process terminates.
+
+
+Key Components of a Process Control Block
+Process Identification:
+
+1. Process ID (PID): A unique identifier for the process.
+2. Parent Process ID (PPID): The ID of the parent process, if applicable.
+3. Process State: The current state of the process (e.g., New, Ready, Running, Waiting, Terminated).
+
+4. Program Counter: Indicates the next instruction to be executed in the process.
+
+5. CPU Registers: A set of registers that hold temporary data for the process, including general-purpose registers and status registers.
+
+6. Memory Management Information:
+
+7. Base and Limit Registers: Used to define the process's memory boundaries.
+8. Page Tables: Information related to the virtual memory of the process.
+9. Scheduling Information: Data relevant for the scheduling of the process, including priority, scheduling queue pointers, and CPU time used.
+
+10. I/O Status Information: Information about I/O devices allocated to the process and their status.
+
+11. Process Privileges: Information about the privileges associated with the process, determining what resources the process can access.
+
+12. Accounting Information: Data related to resource usage, such as CPU time used, memory allocated, and other resource metrics.
+
+### Role of the PCB in Process Management
+
+- Context Switching: When the operating system switches the CPU from one process to another, it saves the context of the currently running process (i.e., its state, program counter, registers, etc.) in its PCB. It then loads the context of the next process from its PCB, allowing for seamless execution.
+
+- Resource Management: The PCB helps the OS manage resources allocated to the process, ensuring that the process receives the necessary CPU time and memory.
+
+- Process Scheduling: The information in the PCB allows the scheduler to make decisions about which process to run next based on priority, state, and other factors.
+
+- Process Termination: Upon termination, the PCB holds the exit status of the process and is used for cleanup activities, such as deallocating resources.
+
+
+## Thread
+A thread is the smallest unit of processing that can be scheduled by an operating system. It is a lightweight process that shares resources such
+as memory and file handles with 
+other threads in the same process, allowing for 
+concurrent execution
 ### Thread.start()
 - Purpose: The start() method is used to begin the execution of a new thread.
 - Behavior: When you call start(), a new thread is created, and the run() method is invoked in that new thread. This means that the start() method does not block the current thread; both the current thread and the new thread will execute concurrently.
@@ -90,9 +154,44 @@ There are 3 Pillars and 1 Principle of OOPS
 In the below Example you can see when thread.run() is called it 
 runs in the current thread rather creating a new thread that is shown 
 there by priniting the thread name.
+
 ![img_1.png](img_1.png)
+
+Output
+
 ![img.png](img.png)
-For further reference, please consider the following sections:
+
+
+
+# Executors and Callables
+
+Executors framework and the Callable interface are part of the Java Concurrency API. 
+They allow you to manage and execute asynchronous tasks in a more structured way compared to using threads directly
+
+### Callable Interface
+The Callable interface is similar to Runnable, but it can return a result and throw checked exceptions. 
+This makes it more flexible for tasks that need to produce a value or handle exceptions.
+
+Key Points:
+  - Return Type: Callable has a generic return type. You can specify what type it returns when you implement the interface.
+  - Checked Exceptions: Unlike Runnable, Callable can throw checked exceptions, making it suitable for tasks that might fail.
+
+### Executors
+The Executors class provides factory methods for creating thread pools and managing asynchronous task execution. You can submit tasks to an executor service, which handles the threading for you.
+
+Key Points:
+- Thread Pool Management: You don't have to manage threads manually; the executor service handles the lifecycle of threads.
+- Task Submission: You can submit Callable and Runnable tasks to the executor for execution.
+- Future: When you submit a Callable, you receive a Future object that can be used to retrieve the result of the computation or check its status.
+
+
+#### Benefits of Using Executors and Callables
+
+- Simplicity : You don't need to manage threads directly. The executor service takes care of thread creation, reuse, and lifecycle management.
+- Asynchronous Execution: Allows for concurrent execution of tasks, which can improve performance in I/O-bound or CPU-bound applications.
+- Result Handling: Callable provides a way to return results and handle exceptions more effectively compared to Runnable.
+
+
 
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.4/maven-plugin)
