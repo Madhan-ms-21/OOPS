@@ -292,12 +292,42 @@ Key Points:
 - Result Handling: Callable provides a way to return results and handle exceptions more effectively compared to Runnable.
 
 
+### Synchronization Problem
+- **Critical Section** : The part of code that is working on
+  the shared data
+- **Race conditions** : When more than 1 thread try to enter
+  the critical section we get a race
+  condition.
+- **Preemption** : Preemption means that when a thread
+  TI is in critical section OS stops
+  its execution allows another thread to
+  enter the critical section
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.3.4/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.3.4/maven-plugin/build-image.html)
+#### Mutex
+A mutex (short for mutual exclusion) is a synchronization primitive used in concurrent programming to prevent multiple threads from accessing shared resources simultaneously. It ensures that only one thread can acquire the mutex lock at a time, thereby protecting critical sections of code from race conditions.
+- When a thread wants to access a shared resource, it must first acquire the mutex lock. If the lock is held by another thread, the requesting thread will be blocked until the lock is released.
 
-### Maven Parent overrides
+- Once the thread has finished using the shared resource, it releases the mutex, allowing other waiting threads to acquire it.
+
+#### Synchronized Locks
+Synchronized locks in Java are mechanisms that allow multiple threads to control access to shared resources, ensuring that only one thread can access a resource at a time. This helps prevent race conditions, which occur when two or more threads try to modify the same data simultaneously.
+
+1. Synchronized Methods 
+   1. Description: Methods declared with the synchronized keyword. 
+   2. Locking: Locks the instance of the object (for instance methods) or the class itself (for static methods). 
+   3. Usage: Ensures that only one thread can execute the method at a time.
+2. Synchronized Blocks 
+   1. Description: Blocks of code within a method that are synchronized. 
+   2. Locking: Locks a specific object, allowing for finer control over which parts of code are synchronized. 
+   3. Usage: Reduces contention by locking only the necessary code sections.
+3. Static Synchronized Blocks 
+   1. Description: Synchronized blocks that lock on the class object. 
+   2. Locking: Ensures that only one thread can execute any static synchronized method at a time. 
+   3. Usage: Useful for synchronizing access to static variables or methods.
+
+
+
+
 
 ### Link
 
