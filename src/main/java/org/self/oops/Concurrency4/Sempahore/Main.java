@@ -1,4 +1,4 @@
-package org.self.oops.Concurrency4;
+package org.self.oops.Concurrency4.Sempahore;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -20,6 +20,8 @@ public class Main {
 
 //        t1.join();
 //        t2.join();
+        Integer a = 8;
+        
 
 
     }

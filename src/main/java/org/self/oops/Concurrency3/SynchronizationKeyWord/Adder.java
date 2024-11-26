@@ -18,3 +18,5 @@ public class Adder implements Runnable {
         }
     }
 }
+
+// maintain the counter

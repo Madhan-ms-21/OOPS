@@ -327,9 +327,26 @@ Synchronized locks in Java are mechanisms that allow multiple threads to control
 
 
 
+### Comparable vs Comparator
+
+**_Comparable_** is an interface defining a strategy of comparing an object with other objects of the same type. This is called the class’s “natural ordering.”
+
+**_Comparator_** interface defines a compare(arg1, arg2) method with two arguments that represent compared objects, and works similarly to the Comparable.compareTo() method.
+
+The Comparable interface is a good choice to use for defining the default ordering, or in other words, if it’s the main way of comparing objects.
+
+So why use a Comparator if we already have Comparable?
+
+There are several reasons why:
+
+- Sometimes we can’t modify the source code of the class whose objects we want to sort, thus making the use of Comparable impossible
+- Using Comparators allows us to avoid adding additional code to our domain classes
+- We can define multiple different comparison strategies, which isn’t possible when using Comparable
 
 
 ### Link
 
 [LLD](https://github.com/ashishps1/awesome-low-level-design)
+
+[TypedNotes](https://github.com/KingsGambitLab/Lecture_Notes)
 

@@ -1,7 +1,7 @@
 package org.self.oops.Concurrency3.SynchronizationKeyWord;
 
 public class Subtractor implements Runnable {
-    Count count;
+    final Count count;
 
     public Subtractor(Count count) {
         this.count = count;
@@ -9,7 +9,7 @@ public class Subtractor implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 875; i++) {
-            synchronized (count) {
+            synchronized(count){
                 count.num--;
             }
 
